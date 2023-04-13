@@ -46,7 +46,7 @@ let getEditCRUD = async (req, res) => {
 let putCRUD = async (req, res) => {
     let data = req.body;
     let allUser = await CRUDService.updateUserData(data);
-    return res.render('displayCRUD', {
+    return res.render('displayCRUD.ejs', {
         dataTable: allUser
     })
 
